@@ -27,43 +27,6 @@
 
 / {
     macros {
-        ZMK_MACRO(scope, wait-ms = <30>; tap-ms = <30>; bindings = <&kp COLON &kp COLON>;)
-        ZMK_MACRO(lambda, wait-ms = <30>; tap-ms = <30>; bindings = <&kp L &kp A &kp M &kp B &kp D &kp A>;)
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-        #define COMBO(NAME, BINDINGS, KEYPOS, TIMEOUT) \
-              combo_##NAME { \
-                timeout-ms = <TIMEOUT>; \
-                bindings = <BINDINGS>; \
-                key-positions = <KEYPOS>; \
-              };
-
-        /*                KEY POSITIONS
-
-          ╭────────────────────╮ ╭────────────────────╮
-          │  0   1   2   3   4 │ │  5   6   7   8   9 │
-          │ 10  11  12  13  14 │ │ 15  16  17  18  19 │
-          │ 20  21  22  23  24 │ │ 25  26  27  28  29 │
-          ╰───────╮ 30  31  32 │ │ 33  34  35 ╭───────╯
-                  ╰────────────╯ ╰────────────╯        */
-
-        COMBO(caps_word_left, &caps_word, 13 14, 60)
-        COMBO(caps_word_right, &caps_word, 15 16, 60)
-
-        COMBO(grave, &kp GRAVE, 1 2, 60)
-        COMBO(pipe, &kp PIPE, 3 4, 60)
-
-        COMBO(amp, &kp AMPS, 5 6, 60)
-        COMBO(colon, &kp EQUAL, 7 8, 60)
-
-        COMBO(lpar, &kp LPAR, 21 22, 60)
-        COMBO(rpar, &kp RPAR, 27 28, 60)
-
-        COMBO(dash, &kp MINUS, 22 23, 60)
-        COMBO(under, &kp UNDERSCORE, 26 27, 60)
     };
 
     behaviors {
@@ -133,6 +96,44 @@
             bindings = <&mo>, <&key_repeat>;
         };
     };
+
+    combos {
+        compatible = "zmk,combos";
+
+        #define COMBO(NAME, BINDINGS, KEYPOS, TIMEOUT) \
+              combo_##NAME { \
+                timeout-ms = <TIMEOUT>; \
+                bindings = <BINDINGS>; \
+                key-positions = <KEYPOS>; \
+              };
+
+        /*                KEY POSITIONS
+
+          ╭────────────────────╮ ╭────────────────────╮
+          │  0   1   2   3   4 │ │  5   6   7   8   9 │
+          │ 10  11  12  13  14 │ │ 15  16  17  18  19 │
+          │ 20  21  22  23  24 │ │ 25  26  27  28  29 │
+          ╰───────╮ 30  31  32 │ │ 33  34  35 ╭───────╯
+                  ╰────────────╯ ╰────────────╯        */
+
+        COMBO(caps_word_left, &caps_word, 13 14, 60)
+        COMBO(caps_word_right, &caps_word, 15 16, 60)
+
+        COMBO(grave, &kp GRAVE, 1 2, 60)
+        COMBO(pipe, &kp PIPE, 3 4, 60)
+
+        COMBO(amp, &kp AMPS, 5 6, 60)
+
+        COMBO(lpar, &kp LPAR, 21 22, 60)
+        COMBO(rpar, &kp RPAR, 27 28, 60)
+
+        COMBO(dash, &kp MINUS, 22 23, 60)
+        COMBO(under, &kp UNDERSCORE, 26 27, 60)
+
+        COMBO(excl, &kp EXCL, 23 24, 60)
+        COMBO(equal, &kp EQUAL, 25 26, 60)        
+    };
+
 
 	keymap {
 		compatible = "zmk,keymap";
