@@ -20,10 +20,8 @@
 #define SYM_L   1
 #define NUM_L   2
 #define NAV_L   3
-
-#define CUT   LG(X)
-#define COPY  LG(C)
-#define PASTE LG(V)
+#define SYM_L_L 4
+#define SYM_R_L 5
 
 / {
     macros {
@@ -143,7 +141,7 @@
                    &kp Q        &kp W         &kp E               &kp R               &kp T              &kp Y              &kp U               &kp I                 &kp O           &kp P 
                    &lhm LALT A  &lhm LCTRL S  &lhm LGUI D         &lhm LSHFT F        &kp G              &kp H              &rhm RSHFT J        &rhm RGUI K           &rhm RCTRL L    &rhm RALT SEMI
                    &kp Z        &kp X         &kp C               &kp V               &kp B              &kp N              &kp M               &kp COMMA             &kp DOT         &kp FSLH
-                  /*&          &*/            &base_lt NAV_L BKSP &base_lt SYM_L TAB  &base_lt NUM_L ESC &base_lt NUM_L TAB &base_lt SYM_L RET  &base_lt NAV_L SPC    /*&             &*/
+                  /*&          &*/            &base_lt NAV_L BKSP &base_lt SYM_R_L TAB  &base_lt NUM_L ESC &base_lt NUM_L TAB &base_lt SYM_L_L RET  &base_lt NAV_L SPC    /*&             &*/
 			>;
 		};
 
@@ -161,7 +159,7 @@
                    &kp F10      &kp F6        &kp F5        &kp F4             &kp STAR           &kp PLUS            &kp N7           &kp N8                   &kp N9        &kp UNDER
                    &kp F11      &kp F3        &kp F2        &kp F1             &sk LSHFT          &kp MINUS           &kp N4           &kp N5                   &kp N6        &kp DOT 
                    &kp F12      &kp F9        &kp F8        &kp F7             &kp COLON          &kp EQUAL           &kp N1           &kp N2                   &kp N3        &kp COMMA
-				 /*&            &*/           &trans        &trans             &kp N0             &kp N0              &trans           &trans                 /*&             &*/
+				 /*&            &*/           &trans        &trans             &trans             &kp N0              &kp N0           &kp N0                 /*&             &*/
 			>;
 		};
 
@@ -169,9 +167,27 @@
 			bindings = <
                    &trans       &trans        &trans        &trans             &bt BT_CLR         &bt BT_PRV          &bt BT_NXT       &trans               &trans        &trans
                    &sk LALT     &sk LGUI      &sk LSHFT     &sk LCTRL          &trans             &trans              &kp LEFT         &kp DOWN             &kp UP        &kp RIGHT
-                   &trans       &kp CUT       &kp COPY      &kp PASTE          &trans             &trans              &kp HOME         &kp K_PREV           &kp K_NEXT    &kp END
+                   &trans       &trans        &trans        &trans             &trans             &trans              &kp HOME         &kp K_PREV           &kp K_NEXT    &kp END
 				 /*&            &*/           &trans        &trans             &trans             &trans              &trans           &trans             /*&             &*/
 			>;
 		};
+
+        sym_l_layer {
+            bindings = <
+                   &kp APOS     &kp LT        &kp GT        &kp DQT            &kp AMPS           &trans       &trans          &trans              &trans      &trans
+                   &kp EXCL     &kp MINUS     &kp PLUS      &kp EQUAL          &kp PIPE           &trans       &kp RSHFT       &kp RGUI            &kp RCTRL   &kp RALT 
+                   &kp CARET    &kp FSLH      &kp STAR      &kp BSLH           &kp TILDE          &trans       &trans          &trans              &trans      &trans
+				 /*&            &*/           &trans        &trans             &trans             &trans       &trans          &trans              /*&             &*/
+			>;
+        };
+
+        sym_r_layer {
+            bindings = <
+                   &trans       &trans        &trans        &trans             &trans           &kp PLUS       &kp DOT          &kp LBRC           &kp RBRC      &kp PRCNT
+                   &kp LALT     &kp LCTRL     &kp LGUI      &kp LSHFT          &trans           &kp COLON      &kp HASH         &kp LPAR           &kp RPAR      &kp AT
+                   &trans       &trans        &trans        &trans             &trans           &kp EQUAL      &kp DLLR         &kp LBKT           &kp RBKT      &kp QMARK
+				   /*&          &*/           &trans        &trans             &trans           &trans         &trans           &trans             /*&             &*/
+			>;
+        };
 	};
 };
