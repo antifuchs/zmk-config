@@ -17,11 +17,12 @@
 };
 
 #define BASE_L  0
-#define SYM_L   1
+// free 1
 #define NUM_L   2
 #define NAV_L   3
 #define SYM_L_L 4
 #define SYM_R_L 5
+#define APP_L   6
 
 / {
     macros {
@@ -132,34 +133,46 @@
         COMBO(equal, &kp EQUAL, 25 26, 60)        
     };
 
+    #define APP(n) LS(LA(LG(LC(n))))
+    #define APP_ED APP(N1)
+    #define APP_WEB APP(N2)
+    #define APP_TERM APP(N3)
+    #define APP_SLACK APP(N4)
+    #define APP_MAIL APP(N5)
+    #define APP_VC APP(N6)
+    #define APP_IRC APP(N7)
+    #define APP_MSG APP(N8)
+    #define APP_CAL APP(N9)
+    #define APP_NOTES APP(N0)
+    #define APP_DASH LA(LG(LC(SPACE)))
 
 	keymap {
 		compatible = "zmk,keymap";
 
 		base_layer {
 			bindings =  <
-                   &kp Q        &kp W         &kp E               &kp R               &kp T              &kp Y              &kp U               &kp I                 &kp O           &kp P 
-                   &lhm LALT A  &lhm LCTRL S  &lhm LGUI D         &lhm LSHFT F        &kp G              &kp H              &rhm RSHFT J        &rhm RGUI K           &rhm RCTRL L    &rhm RALT SEMI
-                   &kp Z        &kp X         &kp C               &kp V               &kp B              &kp N              &kp M               &kp COMMA             &kp DOT         &kp FSLH
-                  /*&          &*/            &base_lt NAV_L BKSP &base_lt SYM_R_L TAB  &base_lt NUM_L ESC &base_lt NUM_L TAB &base_lt SYM_L_L RET  &base_lt NAV_L SPC    /*&             &*/
+                   &kp Q        &kp W         &kp E               &kp R                 &kp T                &kp Y              &kp U                 &kp I                 &kp O           &kp P 
+                   &lhm LALT A  &lhm LCTRL S  &lhm LGUI D         &lhm LSHFT F          &kp G                &kp H              &rhm RSHFT J          &rhm RGUI K           &rhm RCTRL L    &rhm RALT SEMI
+                   &kp Z        &kp X         &kp C               &kp V                 &kp B                &kp N              &kp M                 &kp COMMA             &kp DOT         &kp FSLH
+                  /*&          &*/            &base_lt NAV_L BKSP &base_lt SYM_R_L TAB  &base_lt NUM_L ESC   &sl APP_L          &base_lt SYM_L_L RET  &base_lt NAV_L SPC      /*&             &*/
 			>;
 		};
 
-		sym_layer {
+		none_layer {
 			bindings = <
-                   &kp APOS     &kp LT        &kp GT        &kp DQT            &kp AMPS           &kp PLUS            &kp DOT          &kp LBRC                 &kp RBRC      &kp PRCNT
-                   &kp EXCL     &kp MINUS     &kp PLUS      &kp EQUAL          &kp PIPE           &kp COLON           &kp HASH         &kp LPAR                 &kp RPAR      &kp AT
-                   &kp CARET    &kp FSLH      &kp STAR      &kp BSLH           &kp TILDE          &kp EQUAL           &kp DLLR         &kp LBKT                 &kp RBKT      &kp QMARK
-				 /*&            &*/           &trans        &trans             &trans             &trans              &trans           &trans                 /*&             &*/
+                   &trans       &trans        &trans        &trans             &trans             &trans              &trans           &trans              &trans        &trans
+                   &trans      &trans        &kp APP_SLACK     &trans             &kp APP_DASH         &kp APP_IRC             &trans           &kp APP_ED              &kp APP_TERM      &kp APP_NOTES
+                   &trans       &trans        &kp APP_WEB       &kp APP_VC             &trans             &trans              &kp APP_MAIL         &trans              &trans        &trans
+				   /*&            &*/         &trans        &trans             &trans             &trans              &trans           &trans              /*&           &*/
 			>;
 		};
 
 		num_layer {
 			bindings = <
-                   &kp F10      &kp F6        &kp F5        &kp F4             &kp STAR           &kp PLUS            &kp N7           &kp N8                   &kp N9        &kp UNDER
-                   &kp F11      &kp F3        &kp F2        &kp F1             &sk LSHFT          &kp MINUS           &kp N4           &kp N5                   &kp N6        &kp DOT 
-                   &kp F12      &kp F9        &kp F8        &kp F7             &kp COLON          &kp EQUAL           &kp N1           &kp N2                   &kp N3        &kp COMMA
-				 /*&            &*/           &trans        &trans             &trans             &kp N0              &kp N0           &kp N0                 /*&             &*/
+                   &kp F10      &kp F7        &kp F8        &kp F9             &kp STAR           &kp PLUS            &kp N7           &kp N8                   &kp N9        &kp UNDER
+                   &kp F11      &kp F4        &kp F5        &kp F6             &sk LSHFT          &kp MINUS           &kp N4           &kp N5                   &kp N6        &kp DOT 
+                   &kp F12      &kp F1        &kp F2        &kp F3             &kp COLON          &kp EQUAL           &kp N1           &kp N2                   &kp N3        &kp COMMA
+				 /*&            &*/           &kp F13        &trans             &trans             &kp N0              &kp N0           &kp N0                 /*&             &*/
 			>;
 		};
 
@@ -189,5 +202,15 @@
 				   /*&          &*/           &trans        &trans             &trans           &trans         &trans           &trans             /*&             &*/
 			>;
         };
+
+        app_layer {
+			bindings = <
+                   &trans       &trans        &trans        &trans             &trans             &trans              &trans           &trans              &trans        &trans
+                   &kp APP_CAL  &trans        &kp APP_SLACK &trans             &kp APP_DASH       &kp APP_IRC         &trans           &kp APP_ED          &kp APP_TERM  &kp APP_NOTES
+                   &trans       &trans        &kp APP_WEB   &kp APP_VC         &trans             &trans              &kp APP_MAIL     &trans              &trans        &trans
+				   /*&            &*/         &trans        &trans             &trans             &trans              &trans           &trans              /*&           &*/
+			>;
+		};
+
 	};
 };
