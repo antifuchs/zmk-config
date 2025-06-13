@@ -17,12 +17,11 @@
 };
 
 #define BASE_L  0
-// free 1
-#define NUM_L   2
-#define NAV_L   3
-#define SYM_L_L 4
-#define SYM_R_L 5
-#define APP_L   6
+#define NUM_L   1
+#define NAV_L   2
+#define SYM_L_L 3
+#define SYM_R_L 4
+#define APP_L   5
 
 / {
     macros {
@@ -156,15 +155,6 @@
             /**/ &lhm LALT A &lhm LCTRL S &lhm LGUI D         &lhm LSHFT F          &kp G              /* &*/ &kp H         &rhm RSHFT J          &rhm RGUI K           &rhm RCTRL L &rhm RALT SEMI
             /**/ &kp Z       &kp X        &kp C               &kp V                 &kp B              /* &*/ &kp N         &kp M                 &kp COMMA             &kp DOT      &kp FSLH
             /*   &           &*/          &base_lt NAV_L BKSP &base_lt SYM_R_L TAB  &base_lt NUM_L ESC /* &*/ &sl APP_L     &base_lt SYM_L_L RET  &base_lt NAV_L SPC /* &            &*/
-			>;
-		};
-
-		none_layer {
-			bindings = <
-            /**/ &trans      &trans       &trans              &trans                &trans             /* & */ &trans       &trans                &trans                &trans       &trans
-            /**/ &trans      &trans       &kp APP_SLACK       &trans                &kp APP_DASH       /* & */ &kp APP_IRC  &trans                &kp APP_ED            &kp APP_TERM &kp APP_NOTES
-            /**/ &trans      &trans       &kp APP_WEB         &kp APP_VC            &trans             /* & */ &trans       &kp APP_MAIL          &trans                &trans       &trans
-            /*   &           &*/          &trans              &trans                &trans             /* & */ &trans       &trans                &trans             /* &            &*/
 			>;
 		};
 
