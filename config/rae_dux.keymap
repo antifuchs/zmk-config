@@ -102,6 +102,7 @@
         #define COMBO(NAME, BINDINGS, KEYPOS, TIMEOUT) \
               combo_##NAME { \
                 timeout-ms = <TIMEOUT>; \
+                layers = <BASE_L NUM_L SYM_L_L SYM_R_L>; \
                 bindings = <BINDINGS>; \
                 key-positions = <KEYPOS>; \
               };
