@@ -151,64 +151,64 @@
 
 		base_layer {
 			bindings =  <
-                   &kp Q        &kp W         &kp E               &kp R                 &kp T                &kp Y              &kp U                 &kp I                 &kp O           &kp P 
-                   &lhm LALT A  &lhm LCTRL S  &lhm LGUI D         &lhm LSHFT F          &kp G                &kp H              &rhm RSHFT J          &rhm RGUI K           &rhm RCTRL L    &rhm RALT SEMI
-                   &kp Z        &kp X         &kp C               &kp V                 &kp B                &kp N              &kp M                 &kp COMMA             &kp DOT         &kp FSLH
-                  /*&          &*/            &base_lt NAV_L BKSP &base_lt SYM_R_L TAB  &base_lt NUM_L ESC   &sl APP_L          &base_lt SYM_L_L RET  &base_lt NAV_L SPC      /*&             &*/
+            /**/        &kp Q        &kp W          &kp E               &kp R                  &kp T                &kp Y          /* &*/                 &kp U                 &kp I                      &kp O             &kp P
+            /**/        &lhm LALT A  &lhm LCTRL S   &lhm LGUI D         &lhm LSHFT F           &kp G                &kp H          /* &*/                 &rhm RSHFT J          &rhm RGUI K                &rhm RCTRL L      &rhm RALT SEMI
+            /**/        &kp Z        &kp X          &kp C               &kp V                  &kp B                &kp N          /* &*/                 &kp M                 &kp COMMA                  &kp DOT           &kp FSLH
+            /*          &            &*/            &base_lt NAV_L BKSP &base_lt SYM_R_L TAB   &base_lt NUM_L ESC   &sl APP_L      /* &*/                 &base_lt SYM_L_L RET  &base_lt NAV_L SPC      /* &                 &*/
 			>;
 		};
 
 		none_layer {
 			bindings = <
-                   &trans       &trans        &trans        &trans             &trans             &trans              &trans           &trans              &trans        &trans
-                   &trans      &trans        &kp APP_SLACK     &trans             &kp APP_DASH         &kp APP_IRC             &trans           &kp APP_ED              &kp APP_TERM      &kp APP_NOTES
-                   &trans       &trans        &kp APP_WEB       &kp APP_VC             &trans             &trans              &kp APP_MAIL         &trans              &trans        &trans
-				   /*&            &*/         &trans        &trans             &trans             &trans              &trans           &trans              /*&           &*/
+                /**/    &trans       &trans         &trans              &trans                 &trans               &trans          /*&*/                 &trans                &trans                     &trans            &trans
+                /**/    &trans       &trans         &kp APP_SLACK       &trans                 &kp APP_DASH         &kp APP_IRC     /*&*/                 &trans                &kp APP_ED                 &kp APP_TERM      &kp APP_NOTES
+                /**/    &trans       &trans         &kp APP_WEB         &kp APP_VC             &trans               &trans          /*&*/                 &kp APP_MAIL          &trans                     &trans            &trans
+                /*      &            &*/            &trans              &trans                 &trans               &trans          /*&*/                 &trans                &trans              /*     &                 &*/
 			>;
 		};
 
 		num_layer {
 			bindings = <
-                   &kp F10      &kp F7        &kp F8        &kp F9             &kp STAR           &kp PLUS            &kp N7           &kp N8                   &kp N9        &kp UNDER
-                   &kp F11      &kp F4        &kp F5        &kp F6             &sk LSHFT          &kp MINUS           &kp N4           &kp N5                   &kp N6        &kp DOT 
-                   &kp F12      &kp F1        &kp F2        &kp F3             &kp COLON          &kp EQUAL           &kp N1           &kp N2                   &kp N3        &kp COMMA
-				 /*&            &*/           &kp F13        &trans             &trans             &kp N0              &kp N0           &kp N0                 /*&             &*/
+                /**/    &kp F10      &kp F7         &kp F8              &kp F9                 &kp STAR      /*     &*/               &kp PLUS            &kp N7                &kp N8                     &kp N9            &kp UNDER
+                /**/    &kp F11      &kp F4         &kp F5              &kp F6                 &sk LSHFT     /*     &*/               &kp MINUS           &kp N4                &kp N5                     &kp N6            &kp DOT 
+                /**/    &kp F12      &kp F1         &kp F2              &kp F3                 &kp COLON     /*     &*/               &kp EQUAL           &kp N1                &kp N2                     &kp N3            &kp COMMA
+				/*      &            &*/            &kp F13             &trans                 &trans        /*     &*/               &kp N0              &kp N0                &kp N0                 /*  &                 &*/
 			>;
 		};
 
 		nav_layer {
 			bindings = <
-                   &trans       &trans        &trans        &trans             &bt BT_CLR         &bt BT_PRV          &bt BT_NXT       &trans               &trans        &trans
-                   &sk LALT     &sk LGUI      &sk LSHFT     &sk LCTRL          &trans             &trans              &kp LEFT         &kp DOWN             &kp UP        &kp RIGHT
-                   &trans       &trans        &trans        &trans             &trans             &trans              &kp HOME         &kp K_PREV           &kp K_NEXT    &kp END
-				 /*&            &*/           &trans        &trans             &trans             &trans              &trans           &trans             /*&             &*/
+                /**/   &trans       &trans        &trans        &trans             &bt BT_CLR     /*&*/    &bt BT_PRV          &bt BT_NXT       &trans               &trans        &trans
+                /**/   &sk LALT     &sk LGUI      &sk LSHFT     &sk LCTRL          &trans         /*&*/    &trans              &kp LEFT         &kp DOWN             &kp UP        &kp RIGHT
+                /**/   &trans       &trans        &trans        &trans             &trans         /*&*/    &trans              &kp HOME         &kp K_PREV           &kp K_NEXT    &kp END
+				/*     &            & */          &trans        &trans             &trans         /*&*/    &trans              &trans           &trans            /* &             & */
 			>;
 		};
 
         sym_l_layer {
             bindings = <
-                   &kp APOS     &kp LT        &kp GT        &kp DQT            &kp AMPS           &trans       &trans          &trans              &trans      &trans
-                   &kp EXCL     &kp MINUS     &kp PLUS      &kp EQUAL          &kp PIPE           &trans       &kp RSHFT       &kp RGUI            &kp RCTRL   &kp RALT 
-                   &kp CARET    &kp FSLH      &kp STAR      &kp BSLH           &kp TILDE          &trans       &trans          &trans              &trans      &trans
-				 /*&            &*/           &trans        &trans             &trans             &trans       &trans          &trans              /*&             &*/
+                /**/   &kp APOS     &kp LT        &kp GT        &kp DQT            &kp AMPS      /*&*/     &trans       &trans          &trans              &trans      &trans
+                /**/   &kp EXCL     &kp MINUS     &kp PLUS      &kp EQUAL          &kp PIPE      /*&*/     &trans       &kp RSHFT       &kp RGUI            &kp RCTRL   &kp RALT 
+                /**/   &kp CARET    &kp FSLH      &kp STAR      &kp BSLH           &kp TILDE     /*&*/     &trans       &trans          &trans              &trans      &trans
+				/*     &            & */          &trans        &trans             &trans      /*&*/       &trans       &trans          &trans           /* &           & */
 			>;
         };
 
         sym_r_layer {
             bindings = <
-                   &trans       &trans        &trans        &trans             &trans           &kp PLUS       &kp DOT          &kp LBRC           &kp RBRC      &kp PRCNT
-                   &kp LALT     &kp LCTRL     &kp LGUI      &kp LSHFT          &trans           &kp COLON      &kp HASH         &kp LPAR           &kp RPAR      &kp AT
-                   &trans       &trans        &trans        &trans             &trans           &kp EQUAL      &kp DLLR         &kp LBKT           &kp RBKT      &kp QMARK
-				   /*&          &*/           &trans        &trans             &trans           &trans         &trans           &trans             /*&             &*/
+                /**/   &trans       &trans        &trans        &trans             &trans     /*&*/      &kp PLUS       &kp DOT          &kp LBRC           &kp RBRC      &kp PRCNT
+                /**/   &kp LALT     &kp LCTRL     &kp LGUI      &kp LSHFT          &trans     /*&*/      &kp COLON      &kp HASH         &kp LPAR           &kp RPAR      &kp AT
+                /**/   &trans       &trans        &trans        &trans             &trans     /*&*/      &kp EQUAL      &kp DLLR         &kp LBKT           &kp RBKT      &kp QMARK
+			    /*     &            &*/           &trans        &trans             &trans     /*&*/      &trans         &trans           &trans           /*&             &*/
 			>;
         };
 
         app_layer {
 			bindings = <
-                   &trans       &trans        &trans        &trans             &trans             &trans              &trans           &trans              &trans        &trans
-                   &kp APP_CAL  &trans        &kp APP_SLACK &trans             &kp APP_DASH       &kp APP_IRC         &trans           &kp APP_ED          &kp APP_TERM  &kp APP_NOTES
-                   &trans       &trans        &kp APP_WEB   &kp APP_VC         &trans             &trans              &kp APP_MAIL     &trans              &trans        &trans
-				   /*&            &*/         &trans        &trans             &trans             &trans              &trans           &trans              /*&           &*/
+                /**/   &trans       &trans        &trans        &trans             &trans          /*&*/   &trans              &trans           &trans                &trans        &trans
+                /**/   &kp APP_CAL  &trans        &kp APP_SLACK &trans             &kp APP_DASH    /*&*/   &kp APP_IRC         &trans           &kp APP_ED            &kp APP_TERM  &kp APP_NOTES
+                /**/   &trans       &trans        &kp APP_WEB   &kp APP_VC         &trans          /*&*/   &trans              &kp APP_MAIL     &trans                &trans        &trans
+				/*     &            &*/           &trans        &trans             &trans          /*&*/   &trans              &trans           &trans              /*&             &*/
 			>;
 		};
 
