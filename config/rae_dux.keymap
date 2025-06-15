@@ -190,7 +190,7 @@
             bindings = <
             /**/ &trans      &trans       &trans              &trans                &trans             /* & */ &kp PLUS    &kp DOT                &kp LBRC              &kp RBRC     &kp PRCNT
             /**/ &kp LALT    &kp LCTRL    &kp LGUI            &kp LSHFT             &trans             /* & */ &kp LS(O)   &kp HASH               &kp LPAR              &kp RPAR     &kp AT
-            /**/ &trans      &trans       &trans              &trans                &trans             /* & */ &kp EQUAL   &kp DLLR               &kp LBKT              &kp RBKT     &kp QMARK
+            /**/ &kp F10     &kp F20      &kp F18              &trans                &trans             /* & */ &kp EQUAL   &kp DLLR               &kp LBKT              &kp RBKT     &kp QMARK
 			/*   &           &*/          &trans              &trans                &trans             /* & */ &trans      &trans                 &trans             /* &            & */
 			>;
         };
