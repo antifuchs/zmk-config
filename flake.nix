@@ -26,7 +26,7 @@
         board = "nice_nano_v2";
         shield = "rae_dux_%PART%";
 
-        zephyrDepsHash = "sha256-lzXi0+wJ2CgpRzP0x1RJWXsk7arVXw30zU/sGee3vkc=";
+        zephyrDepsHash = "sha256-R+2W/onIy4VfB61OkiNoZyez20VtVDbp2GnAALXwYt8=";
 
         meta = {
           description = "ZMK firmware";
